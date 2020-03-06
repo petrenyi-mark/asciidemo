@@ -32,5 +32,6 @@ jobs:
       run: |
         git config --global user.email "m.petrenyi@gmail.com"
         git config --global user.name "Github Action"
-        git commit -a -m "Add auto-generated documentation"
+        git add .
+        git commit -m "Add auto-generated documentation"
         git push origin gh-pages --force
