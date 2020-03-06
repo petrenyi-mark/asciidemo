@@ -1,0 +1,50 @@
+= Sub Page
+
+Test subPage
+
+== code block test
+[source,java]
+----
+@Path("/hello") //<1>
+public class HelloWorldEndpoint {
+    @GET
+    @Produces("text/plain")
+    public Response doGet() {
+        return Response.ok("Hello from Thorntail!").build();
+    }
+}
+----
+<1> notes
+
+== Other tests
+
+ordered:
+
+. jahbdkja
+. giuagd
+.. uhakjbhd
+. ztcuvbkln
+
+Unordered
+
+* jbkj
+** akfgkab
+* gjvhkbjln
+
+=== ditaa
+
+[ditaa]
+----
+Architecture model
++-----------------+
+|cF87             |
+|layer A          |
+| +-------------+ |
+| |cF98         | |
+| |layer b      | |
+| |             | |
+| +-------------+ |
+|                 |
++-----------------+
+----
+
