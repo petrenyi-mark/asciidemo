@@ -66,6 +66,7 @@
             <sourceDirectory>${basedir}/docs</sourceDirectory>
             <outputDirectory>${basedir}</outputDirectory>
             <preserveDirectories>true</preserveDirectories>
+            <sourceHighlighter>coderay</sourceHighlighter>
             <backend>html5</backend>
             <requires>
               <require>asciidoctor-diagram</require>
