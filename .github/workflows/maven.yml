@@ -30,6 +30,5 @@ jobs:
     - name: Commit to gh-pages
       shell: bash
       run: |
-        git add .
-        git commit --author="Github Action <m.petrenyi@gmail.com>" -m "Auto generate documentation"
+        git commit -a --author="Github Action <m.petrenyi@gmail.com>" -m "Auto generate documentation"
         git push origin gh-pages --force
