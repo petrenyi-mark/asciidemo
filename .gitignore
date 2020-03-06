@@ -1,0 +1,15 @@
+.idea
+*.iml
+.settings/
+.metadata
+.project
+.classpath
+target/
+bin/
+log/
+etc/ant/build\.ss-XPS-13-9360\.properties
+etc/ant/build.lenovoy40.properties
+project-ex.yml
+*.log
+test-output/
+*.thorntail-runner-cache
