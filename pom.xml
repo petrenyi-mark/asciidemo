@@ -20,6 +20,10 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
 
     <version.thorntail>2.6.0.Final</version.thorntail>
+
+<!--    <asciidoctorj.version>2.2.0</asciidoctorj.version>-->
+    <asciidoctorj.diagram.version>2.0.1</asciidoctorj.diagram.version>
+<!--    <jruby.version>9.2.9.0</jruby.version>-->
   </properties>
 
   <dependencyManagement>
@@ -52,6 +56,31 @@
         </executions>
       </plugin>
     </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.asciidoctor</groupId>
+          <artifactId>asciidoctor-maven-plugin</artifactId>
+          <version>1.6.0</version>
+          <configuration>
+            <sourceDirectory>${basedir}/adocs</sourceDirectory>
+            <outputDirectory>${basedir}/docs</outputDirectory>
+            <preserveDirectories>true</preserveDirectories>
+            <backend>html5</backend>
+            <requires>
+              <require>asciidoctor-diagram</require>
+            </requires>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.asciidoctor</groupId>
+              <artifactId>asciidoctorj-diagram</artifactId>
+              <version>${asciidoctorj.diagram.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 
   <dependencies>
@@ -61,4 +90,26 @@
       <artifactId>jaxrs</artifactId>
     </dependency>
   </dependencies>
+  <profiles>
+    <profile>
+      <id>document</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctor-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>output-html</id>
+                <phase>generate-resources</phase>
+                <goals>
+                  <goal>process-asciidoc</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
