@@ -63,8 +63,8 @@
           <artifactId>asciidoctor-maven-plugin</artifactId>
           <version>1.6.0</version>
           <configuration>
-            <sourceDirectory>${basedir}/adocs</sourceDirectory>
-            <outputDirectory>${basedir}/docs</outputDirectory>
+            <sourceDirectory>${basedir}/docs</sourceDirectory>
+            <outputDirectory>${basedir}</outputDirectory>
             <preserveDirectories>true</preserveDirectories>
             <backend>html5</backend>
             <requires>
