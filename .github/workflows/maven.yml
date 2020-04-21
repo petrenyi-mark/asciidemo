@@ -26,7 +26,12 @@ jobs:
       with:
         java-version: 1.8
     - name: Generate docs with Maven
-      run: mvn asciidoctor:process-asciidoc
+      run: mvn org.asciidoctor:asciidoctor-maven-plugin:1.6.0:process-asciidoc \
+        -Dasciidoctor.sourceDirectory=./docs \
+        -Dasciidoctor.outputDirectory=. \
+        -Dasciidoctor.preserveDirectories=true  \
+        -Dasciidoctor.sourceHighlighter=coderay \
+        -Dasciidoctor.requires=asciidoctor-diagram
     - name: Commit to gh-pages
       shell: bash
       run: |
