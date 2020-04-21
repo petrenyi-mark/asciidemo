@@ -32,6 +32,7 @@ jobs:
         -Dasciidoctor.outputDirectory=. \
         -Dasciidoctor.preserveDirectories=true \
         -Dasciidoctor.sourceHighlighter=coderay \
+        -Dasciidoctor.backend=html5 \
         -Dasciidoctor.requires=asciidoctor-diagram
     - name: Commit to gh-pages
       shell: bash
