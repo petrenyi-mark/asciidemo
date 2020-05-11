@@ -2,6 +2,6 @@
 
 Demo project to test asciidoc with github pages.
 
-include::index.adoc[leveloffset=+1]
+include::docs/index.adoc[leveloffset=+1]
 
 Documentation: https://petrenyi-mark.github.io/asciidemo/
